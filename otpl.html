@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTP Verification</title>
+
+    <style>
+        body{
+            margin:0;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background-image: url("https://unsplash.com/photos/lush-green-swamp-with-dark-water-and-sandy-patches-Zwc_1yAAf9Y");
+            background-size:cover;
+            background-position:center;
+            font-family:Arial;
+        }
+
+        .box{
+            .box{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 30px;
+    color: green
+}        }
+
+        input{
+            width:45px;
+            height:45px;
+            text-align:center;
+            font-size:20px;
+            margin:5px;
+        }
+
+        button{
+            margin-top:15px;
+            padding:10px 20px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>OTP Verification</h2>
+
+    <input type="text" maxlength="1">
+    <input type="text" maxlength="1">
+    <input type="text" maxlength="1">
+    <input type="text" maxlength="1">
+<input type="text" maxlength="1">
+    <br>
+
+    <button onclick="verify()">Verify</button>
+</div>
+
+<script>
+function verify(){
+    alert("OTP Verified!");
+}
+</script>
+<script>
+    const inputs = document.querySelectorAll("input");
+
+document.addEventListener("keydown", function(e) {
+
+    if (/^[0-9]$/.test(e.key)) {
+
+        for (let i = 0; i < inputs.length; i++) {
+
+            if (inputs[i].value === "") {
+                inputs[i].value = e.key;
+
+                if (i < inputs.length - 1)
+                    inputs[i + 1].focus();
+
+                break;
+            }
+        }
+
+        e.preventDefault();
+    }
+
+    if (e.key === "Backspace") {
+
+        for (let i = inputs.length - 1; i >= 0; i--) {
+
+            if (inputs[i].value !== "") {
+                inputs[i].value = "";
+                inputs[i].focus();
+                break;
+            }
+        }
+
+        e.preventDefault();
+    }
+
+    if (e.key === "Enter") {
+        verify();
+    }
+
+});
+</script>
+
+</body>
+</html>
