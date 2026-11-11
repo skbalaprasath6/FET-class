@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>
+           sece innovation
+        </title>
+    </head>
+    <body>
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <header>
+            <h2> SECE INNOVATE 2026</h2>
+            <nav>
+                <a>Home</a>
+                <a>Products</a>
+                <a>About</a>
+            </nav>
+        </header>
+        <main>
+            <section class="bal">
+                <div>
+                    <h2>Student innovation showcase</h2>
+                    <p>
+                        discover creative projects
+                        developed by our students
+                    </p>
+                    <button>
+                        explore products
+                    </button>
+                </div>
+            </section>
+            <section class="panner">
+                <h2>featured products</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Smart home</h3>
+                        <p>AN IoT based smart home system.</p>
+                    </div>
+                    <div class="card">
+                        <h3>AI Assistant</h3>
+                        <p>An intelligent AI_based assistant.</p>
+                    </div>
+                    <divs class="card">
+                        <h3>Smart farming</h3>
+                        <p>A technology-based farming system.</p>
+                    </div>
+                </div>
+
+                </div>
+            </section>
+        </main>
+      <footer>2026 college innovation showcase</footer>
+      <style>
+        body{
+            margin:0;
+
+        }
+        header{
+            background-color:navy;
+            color:brown;
+            padding:20px;
+             
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+      nav{
+        display:flex;
+        gap:20px;
+
+      }
+      nav a{
+        color:blueviolet;
+        text-decoration:underline;
+
+      }
+      .bal{
+        background-color:lightblue;
+        padding: 20px;
+        border:3px solid;
+        box-sizing:content-box
+      }
+      button{
+        background-color: aquamarine;
+        border-radius: 15px;
+      }
+      .panner{
+        text-align: center;
+        padding: 20px;
+        background-color:lightgray;
+      }
+      .grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:15px;
+
+      }
+      .card{
+        text-align: center;
+        
+        
+        background-color: antiquewhite;
+        border-radius: 9px;
+        padding: 15px;
+        color:darkcyan;
+      }
+      footer{
+        text-align: center;
+        padding: 10px;
+        background-color: blueviolet;
+        box-sizing:content-box;
+
+      }
+      @media(max-width:600px){
+        .grid{
+            grid-template-columns: 1fr;
+        }
+      }
+      @media(max-width:400px){
+        header{
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+        nav{
+            gap: 12px;
+        }
+        .bal,
+        .panner{
+            padding: 12px;
+        }
+      }
+
+      </style>
+    </body>
+</html>
